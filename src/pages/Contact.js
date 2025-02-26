@@ -74,7 +74,7 @@ const Contact = () => {
               <li className="info-detail">
                 <i className="bi bi-geo-alt-fill me-2"></i>
                 123 Sector-3,Faridabad<br />
-                Haryana, Hr 121007
+                Haryana,121007
               </li>
             </ul>
           </div>
