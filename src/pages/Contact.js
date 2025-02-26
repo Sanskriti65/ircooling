@@ -93,7 +93,7 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone" className="form-label">Phone no.</label>
-                  <input type="number" id="email" name="phone" className="form-input" required />
+                  <input type="number" id="phone" name="phone" className="form-input" required />
                 </div>
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">Address</label>

@@ -1,9 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
 /* src/HomePage.css */
 body {
@@ -614,10 +608,7 @@ input
     border: 1px solid lightgray;
 }
 
-/* .menu 
-{
-    display: none;
-} */
+
 .insta
 {
     width: 100%;
@@ -950,28 +941,29 @@ button, .hero-text button, .sign-up-button, .btn-submit {
   transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
-button:hover, .hero-text button:hover, .sign-up-button:hover, .btn-submit:hover {
+/* button:hover, .hero-text button:hover, .sign-up-button:hover, .btn-submit:hover {
   background-color: #ff6600; 
-}
+} */
 
 .navbar a {
   text-decoration: none; /* Remove underline from links */
   position: relative; /* Position relative for pseudo-element */
   color: inherit; /* Inherit color from parent */
 }
-.brand img{
+/* .brand img{
   max-width : 10%;
   width: 1%;
   max-height: 1%;
   height: 1%;
   font-size: x-small;
-}
+} */
 .navbar a::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -2px; /* Position the line just below the text */
   width: 100%;
+  cursor:pointer;
   height: 2px;
   background: -webkit-gradient(linear, left top, right top, from(#e67613), to(#e66427));
   background: -o-linear-gradient(left, #e67613, #e66427);
@@ -988,7 +980,6 @@ button:hover, .hero-text button:hover, .sign-up-button:hover, .btn-submit:hover 
       -ms-transform-origin: bottom right;
           transform-origin: bottom right;
 }
-
 .navbar a:hover::after {
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
