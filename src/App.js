@@ -1,27 +1,27 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import 'font-awesome/css/font-awesome.min.css';
-import '../node_modules/font-awesome/css/font-awesome.min.css';
-import HomePage from './pages/HomePage';
-import Navbar from './components/Navbar';
-import AboutPage from './pages/AboutPage';
-// import ServicesPage from './pages/ServicesPage';
-import Whychoose from './pages/Whychoose';
-import Contact from './pages/Contact';
-// import Services from './pages/Services';
-import Footer from './components/Footer';
+import HomePage from './pages/HomePage.js';
+import Navbar from './components/Navbar.js';
+import AboutPage from './pages/AboutPage.js';
+import Whychoose from './pages/Whychoose.js';
+import Contact from './pages/Contact.js';
+import Footer from './components/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Remove unused FontAwesomeIcon import
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fas);
 
 const App = () => {
   return (
     <Router>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        {/* <Route path="/services" element={<ServicesPage />} /> */}
         <Route path="/whychoose" element={<Whychoose />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

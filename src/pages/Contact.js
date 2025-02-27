@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import emailjs from "emailjs-com";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Initialize EmailJS with your actual public key
-emailjs.init("td4JSbyBD180R9giq");
-
 const Contact = () => {
+  useEffect(() => {
+    emailjs.init("td4JSbyBD180R9giq"); // Move init inside useEffect
+  }, []);
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -23,28 +23,23 @@ const Contact = () => {
     sendEmails(userName, userEmail, userPhone, userMessage);
 
     // Store data in Excel via backend
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-    
-      const userName = event.target.elements.name.value;
-      const userEmail = event.target.elements.email.value;
-      const userPhone = event.target.elements.phone.value;
-      const userMessage = event.target.elements.message.value;
-    
-      // Send data to the backend running on your PC
-      const response = await fetch("http:// 192.168.56.1:5000/saveData", {     
+    try {
+      const response = await fetch("http://localhost:5000/saveData", {     
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: userName, email: userEmail, phone: userPhone, message: userMessage }),
       });
-    
+
       if (response.ok) {
         alert("Form submitted successfully and saved to Excel!");
       } else {
         alert("Failed to save data.");
       }
-    };
-    
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while submitting the form.");
+    }
+  };
 
   const sendEmails = (userName, userEmail, userPhone, userMessage) => {
     const userTemplateParams = {

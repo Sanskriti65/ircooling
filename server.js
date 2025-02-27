@@ -1,8 +1,9 @@
-const express = require("express");
-const ExcelJS = require("exceljs");
-const cors = require("cors");
-const fs = require("fs");
-const bodyParser = require("body-parser");
+import express from "express";
+import ExcelJS from "exceljs";
+import cors from "cors";
+import fs from "fs";
+import bodyParser from "body-parser";
+
 
 const app = express();
 app.use(cors());

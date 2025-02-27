@@ -1,5 +1,5 @@
 import React from 'react';
-import FeatureCard from '../components/FeatureCard';
+import FeatureCard from '../components/FeatureCard.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import 'font-awesome/css/font-awesome.min.css';
 
